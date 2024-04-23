@@ -12,11 +12,7 @@ const UpdateFood = () => {
     const [data, setData] = useState([]);
 
 
-    // const ExistingData = async (id)=>{
-    //     let response = await axios.get('api/GetProduct');
-    //
-    //     setData(response.data['data'])
-    // }
+
 
     const ExistingData=async (id)=>{
         let res=await axios.get(`/api/GetProductById/${id}`);

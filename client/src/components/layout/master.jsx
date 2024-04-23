@@ -38,7 +38,6 @@ const Master = (props) => {
                             CRUD Food
                         </Heading>
                     </div>
-
                     {/* menu label section */}
                     <Text size="xs" as="p" className="ml-5 mt-14 tracking-[1.00px] !text-gray-900_7f md:ml-0">
                         MENU
@@ -54,25 +53,29 @@ const Master = (props) => {
                                 fontWeight: 400,
                                 fontSize: "12px",
                                 borderRadius: "5px",
-                                [`&:hover, &.ps-active`]: { color: "#5a67ba", backgroundColor: "#707fdd19 !important" },
+                                [`&:hover, &.ps-active`]: {color: "#5a67ba", backgroundColor: "#707fdd19 !important"},
                             },
                         }}
                         className="mb-[521px] mt-[9px] flex w-full flex-col self-stretch"
                     >
                         {/* cart menu item section */}
                         <Link to='/createFood'>
-                            <MenuItem icon={<Img src="images/img_cart.svg" alt="cart_one" className="h-[18px] w-[18px]" />}>
-                            Create Food
-                        </MenuItem>
+                            <MenuItem
+                                icon={<Img src="images/img_cart.svg" alt="cart_one" className="h-[18px] w-[18px]"/>}>
+                                Create Food
+                            </MenuItem>
                         </Link>
                         {/* order menu item section */}
                         <Link to='/'>
-                            <MenuItem icon={<Img src="images/img_megaphone.svg" alt="megaphone_one" className="h-[18px] w-[18px]" />}>
-                            All Foods
-                        </MenuItem>
+                            <MenuItem icon={<Img src="images/img_megaphone.svg" alt="megaphone_one"
+                                                 className="h-[18px] w-[18px]"/>}>
+                                All Foods
+                            </MenuItem>
                         </Link>
                     </Menu>
                 </Sidebar>
+
+
 
                 {/* content section */}
                 {props.children}
